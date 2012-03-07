@@ -31,11 +31,9 @@ public class Controller extends GenericForwardComposer implements IController {
         } catch (InterruptedException ex) {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
         }
-        LlenadoTablas renderB = new LlenadoTablas();
-        renderB.llenadoBebidas(bebiList);
-
-        LlenadoTablas renderA = new LlenadoTablas();
-        renderA.llenadoAlimentos(aliList);
+        LlenadoTablas render = new LlenadoTablas();
+        render.llenadoBebidas(bebiList);
+        render.llenadoAlimentos(aliList);
     }
 
     public void onSelect$bebiList() {
